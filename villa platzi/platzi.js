@@ -85,7 +85,7 @@ function dibujar()
       var x = x * 60;
       var y = y * 40;
       papel.drawImage(vaca.imagen, x, y);
-    }/*
+    }
     if(pollo.cargaOK)
     {
       console.log(cantidad2);
@@ -96,7 +96,8 @@ function dibujar()
         var x = x * 60;
         var y = y * 40;
         papel.drawImage(pollo.imagen, x, y);
-  }*/
+  }
+}
 }
 if(cerdo.cargaOK)
 {
@@ -129,12 +130,13 @@ var teclas = {
   LEFT: 37,
   RIGHT: 39
 };
-document.addEventListener("keydown", dibujarTeclado);
+document.addEventListener("keydown", moverAnimal);
 var cuadrito = document.getElementById("villaplatzi");
 var papel = cuadrito.getContext("2d");
 
 function moverAnimal(evento)
 {
+  var x; var y;
   var movimiento = 5;
   switch(evento.keyCode)
   {
