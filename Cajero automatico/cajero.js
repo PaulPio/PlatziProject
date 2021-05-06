@@ -6,30 +6,45 @@ class Billetes{
         this.cantidad = cantidad;
     }
 }
+var dinero = 0;//Dinero a recolectar del cajero(futuro a poner por el user)
+var b = document.getElementById("extraer");
+b.addEventListener("click", entregardinero);
 
-caja = [(new Billetes(50, 1)), (new Billetes(20, 2)), (new Billetes(10, 2))];//Los billetes en caja
-
-dinero = 30;//Dinero a recolectar del cajero(futuro a poner por el user)
-
-var entregado =[];//Array con la plata entregada
-
-var div, papeles;
-for (var b of caja) {
-    var i = 0;
-    if (dinero > 0) {
-        div = Math.floor(dinero/b.valor);//Para saber el numero de billetes
+function entregardinero(){
     
-    if (div>b.cantidad) {
-        papeles = b.cantidad;
+    caja = [(new Billetes(50, 10)), (new Billetes(20, 20)), (new Billetes(10, 20))];//Los billetes en caja
+    var entregado =[];//Array con la plata entregada
+    var div, papeles;
+    var t = document.getElementById("dinero");//Dinero a recolectar del cajero(futuro a poner por el user)
+    dinero = parseInt(t.value);
+    for (var b of caja) {
+        var i = 0;
+        if (dinero > 0) {
+            div = Math.floor(dinero/b.valor);//Para saber el numero de billetes
+
+        if (div>b.cantidad) {
+            papeles = b.cantidad;
+        }
+        else{
+            papeles = div;
+        }
+        entregado.push(new Billetes(b.valor, papeles));
+        dinero = dinero - (b.valor * papeles);
+        }
+
+    }
+    var resultado = document.getElementById("resultado");
+    if (dinero > 0) {
+        resultado.innerHTML +=("<br>Soy un cajero pobre y no tengo dinero :( <br>");
     }
     else{
-        papeles = div;
+        for (var e of entregado) {
+            resultado.innerHTML += (e.cantidad + " billetes de $" + e.valor+ "<br>");
+            
+        }
     }
-    entregado.push(new Billetes(b.valor, papeles));
-    dinero = dinero - (b.valor * papeles);
 }
-}
-for (var i in entregado) {
-    document.write(Object.values(entregado[i]) + "<br>");
-}
-
+    /*for (var i in entregado) {
+        resultado.innerHTML += (Object.values(entregado[i]) + "<br>");
+        }
+    }*/
