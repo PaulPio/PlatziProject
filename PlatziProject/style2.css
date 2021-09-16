@@ -1,0 +1,24 @@
+/*Para el articulo*/
+
+article{
+    all: initial;
+    position: absolute;
+    left: 200px;
+    width: 800px;
+    height: 453px;
+}
+
+
+.proyects{
+    display: grid;
+    grid-template-columns:400px 400px;
+}
+
+.proyects img{
+    width: 390px;
+    height: 215px;
+}
+
+.proyects a{
+    z-index: 9;
+}

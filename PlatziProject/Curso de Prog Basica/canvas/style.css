@@ -1,0 +1,20 @@
+body{
+    background-color: rgba(48, 219, 105, 0.4)
+}
+p{
+    text-align: center;
+}
+
+#canvas{
+    position: relative;
+    margin: auto;
+    padding: 0;
+    display: block;
+    border:blue 3px solid;
+}
+.form {
+    border:green 5px solid;
+    margin: 0 auto;
+    width: 250px;
+}
+
