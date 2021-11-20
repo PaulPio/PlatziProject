@@ -13,8 +13,8 @@ def run():
 
     try:
         data_quote = cmc.cryptocurrency_quotes_latest(symbol=buscar, convert='USD') #Para obtener el precio de una cripto
-        print(data_quote.data[buscar]['data']['name'] + "\n") #Para imprimir el precio buscando en la api
-        print(data_quote.data[buscar]['quote']['USD']['price']) #Para imprimir el precio buscando en la api
+        print("El nombre de la cripto es: " + str(data_quote.data[buscar]['name'])) #Para imprimir el precio buscando en la api
+        print("El precio es : " + str(data_quote.data[buscar]['quote']['USD']['price'])) #Para imprimir el precio buscando en la api
     except Exception:
         print("Hubo un problema")
 
