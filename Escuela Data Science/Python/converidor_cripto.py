@@ -1,6 +1,6 @@
 #Programa para buscar el precio de fiat o de cripto en usd
 #Se usa la libreria de coinmarketcapapi 
-from coinmarketcapapi import CoinMarketCapAPI, CoinMarketCapAPIError
+from coinmarketcap import CoinMarketCapAPI, CoinMarketCapAPIError
 
 def run():
     """ To run the program"""
