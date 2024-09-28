@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+    list-style:none;
+    text-decoration: none;
+    color: black;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+    background-color: rgb(100, 197, 100);
+    z-index: -6;
+}
+
+/*Header para el mensaje de arriba*/
+header{
+    display: table;
+    position: relative;
+    text-align: center;
+	width:1000px;
+	height:200px;
+	background-color: aqua;
+	margin:20px auto;
+}
+
+header p{
+    display: table-cell;
+    font-size: 40px;
+    font-family: 'Caveat', cursive;
+    vertical-align: middle;
+}
+
+/*Para los iconos de las redes sociales*/
+.redes{
+	position:absolute;
+	}
+
+.redes img{
+    width:42px;
+	height:42px;
+    }
+	
+#icono1{
+	top:42px;
+	right:170px;
+	}
+	
+#icono2{
+	top:42px;
+	right:120px;
+	}
+	
+#icono3{
+	top:42px;
+	right:71px;
+	}
+
+#icono4{
+    top:42px;
+	right:19px;
+}
+/*Para la barra de navegacion*/
+nav{
+    position: relative;
+}
+/*Para el menu*/
+nav a{
+    font-family: 'Caveat', cursive;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 35px;
+    text-align: center;
+    font-size: 25px;
+    width: 326px;
+    height: 48px;
+    background-color: #4791d0;
+    margin:0 2px;
+    z-index: 2;
+}
+.navegador{
+    margin: auto;
+    width: 1000px;
+    height: 48px;
+}
+
+.linkss > li{
+    position: relative;
+    display: inline-block;
+}
+
+nav a:hover{
+    color: #CE7D35;
+	transition: all .3s;
+    z-index: 3;
+}
+
+/*Submenu*/
+.submenu{
+    z-index: 2;
+    position: absolute;
+    width: 120%;
+    visibility: hidden;
+    opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+}
+
+.linkss li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+/*Submenus del submenu*/
+.drop{
+    width: 120%;
+    visibility: hidden;
+    opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.drop li a{
+	display: block;
+	padding: 15px;
+}
+
+.submenu li:hover .drop{
+    position: relative;
+    bottom: 48px;
+    left:326px;
+	visibility: visible;
+	opacity: 1;
+}
+
+
+/*Para la parte del medio*/
+
+section{
+    position:relative;
+    margin:10px auto;
+    width:1000px;
+    height:453px;
+}
+
+
+/*Para la columna de skills*/
+aside#izq{
+	position:absolute;
+	width:200px;
+	height:453px;
+	}
+	
+	
+aside#izq ul li{
+	background:#aaa;
+	padding:15px;
+	margin:2px 10px;
+	list-style-position:inside;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+}
+	
+/*Para el articulo*/
+
+article{
+    all: initial;
+    position: absolute;
+    left: 200px;
+    width: 800px;
+    height: 453px;
+}
+
+
+.proyects{
+    display: grid;
+    grid-template-columns:400px 400px;
+}
+
+.proyects img{
+    width: 390px;
+    height: 215px;
+}
+
+/*Para el footer*/
+footer{
+    font-family: 'Caveat', cursive;
+    line-height:70px;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    background-color: gray;
+    width: 1000px;
+    height: 70px;
+}
